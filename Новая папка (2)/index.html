@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мәліметтер қоры тесті</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мәліметтер қоры бойынша тест</h1>
+
+        <label for="question-count">Сұрақтар саны:</label>
+        <select id="question-count">
+            <option value="10">10 сұрақ</option>
+            <option value="20">20 сұрақ</option>
+            <option value="50">50 сұрақ</option>
+            <option value="100">100 сұрақ</option>
+        </select>
+
+        <br><br>
+        <button onclick="startTest()">Тесті бастау</button>
+    </div>
+
+    <script>
+        function startTest() {
+            const selectedCount = document.getElementById('question-count').value;
+            localStorage.setItem('questionCount', selectedCount);
+            window.location.href = 'test.html';
+        }
+    </script>
+</body>
+</html>
