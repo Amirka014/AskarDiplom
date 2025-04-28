@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Нәтиже</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Тест нәтижесі</h1>
+        <p id="score"></p>
+        <button onclick="window.location.href='index.html'">Басты бетке қайту</button>
+    </div>
+
+    <script>
+        const score = localStorage.getItem('score');
+        document.getElementById('score').innerText = `Сіздің нәтижеңіз: ${score} ұпай`;
+    </script>
+</body>
+</html>
+    
